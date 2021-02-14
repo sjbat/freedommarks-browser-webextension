@@ -1,9 +1,9 @@
 {
-  "name": "ZakładkiNextcloud",
+  "name": "ZakladkiNextcloud",
   "version": "0.1.4",
   "manifest_version": 2,
   "description": "Rozszerzenie przeglądarki dla Zakładki Nextcloud",
-  "homepage_url": "https://github.com/damko/freedommarks-browser-webextension",
+  "homepage_url": "https://github.com/sjbat/zakladki-nextcloud",
 
   "options_ui": {
     "page": "FreedomMarks_options.html"
