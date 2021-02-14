@@ -290,7 +290,8 @@ function saveBookmark(browserTab){
         },
         dataType: 'json',
     })
-    .success(function(result){
+    //success
+    .done(function(result){
         if (debug) console.log('success');
         if (debug) console.log(result);
         var bookmark = result.item;
@@ -298,12 +299,13 @@ function saveBookmark(browserTab){
             $('#save-bookmark-button').hide();
             $('#delete-bookmark-button').show();
             $('#bookmark-id').val(bookmark.id);
-            addNotification('success','Saved');
+            addNotification('success','Zapisano');
         } else {
-            addNotification('error','Not saved');
+            addNotification('error','Nie zapisano');
         }
     })
-    .error(function(XMLHttpRequest, status, errorThrown){
+    //error
+    .fail(function(XMLHttpRequest, status, errorThrown){
         if(debug) {
             console.log('ajax error');
             console.log("Status: " + status);
@@ -376,20 +378,20 @@ function searchBookmarks(endpoint, terms, tags, conjunction, page, listTag){
         },
         dataType: 'json',
     })
-    .success(function(result){
+    .done(function(result){
 
         if(debug) console.log('success');
         if(debug) console.log(result);
 
         if(result.status == 'error'){
-            addNotification('Server Error',result.message);
+            addNotification('Błąd serwera',result.message);
         } else {
             var bookmarks = result.data;
             if(debug) console.log(bookmarks);
             makeBookmarksList(bookmarks, listTag);
         }
     })
-    .error(function(XMLHttpRequest, status, errorThrown){
+    .fail(function(XMLHttpRequest, status, errorThrown){
         if(debug) {
             console.log('ajax error');
             console.log("Status: " + status);
@@ -425,7 +427,7 @@ function deleteBookmark(e, bookmarkId){
     // https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
     // Maybe something can be done with this
     // https://github.com/mdn/webextensions-examples/tree/master/window-manipulator
-    if (!window.confirm("Do you really want to delete this bookmark?")) {
+    if (!window.confirm("Masz pewność, że chcesz usunąć tę zakładkę?")) {
         e.preventDefault();
         return false;
     }
@@ -444,7 +446,7 @@ function deleteBookmark(e, bookmarkId){
         },
         dataType: 'json'
     })
-    .success(function(result){
+    .done(function(result){
         $('#bookmark-' + bookmarkId).hide(); //this hides the deleted bookmark from the bookmark list
         CurrentBrowserTab(fillForm);
         $('#delete-bookmark-button').hide();
@@ -452,7 +454,7 @@ function deleteBookmark(e, bookmarkId){
         $('#save-bookmark-button').show();
         addNotification('success','bookmark deleted');
     })
-    .error(function(XMLHttpRequest, status, errorThrown){
+    .fail(function(XMLHttpRequest, status, errorThrown){
         if(debug) {
             console.log('ajax error');
             console.log("Status: " + status);

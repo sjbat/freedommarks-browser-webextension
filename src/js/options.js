@@ -41,7 +41,7 @@ document.querySelector('#saveFreedomMarksSettings').addEventListener('click', ()
     }).then(function(result) {
         if(debug) console.log('Settings have been saved');
         var notification_area = document.getElementById('settings_notification_area');
-        notification_area.textContent='Settings have been saved';
+        notification_area.textContent='Ustawienia zostały zapisane';
         notification_area.className = "boxed success";
         notification_area.style.display = 'block';
         setTimeout(function(){
@@ -56,9 +56,9 @@ document.querySelector('#saveFreedomMarksSettings').addEventListener('click', ()
 browser.storage.local.get('freedommarks_settings').then(function(result) {
 
     //default values
-    document.getElementById('server_url').value = 'https://127.0.0.1:80';
-    document.getElementById('username').value = 'username';
-    document.getElementById('password').value = 'strong-password';
+    document.getElementById('server_url').value = 'https://chmura.lhub.pl';
+    document.getElementById('username').value = '';
+    document.getElementById('password').value = '';
     document.getElementById('bookmark_main_tab').checked = true;
     document.getElementById('search_main_tab').checked = false;
 

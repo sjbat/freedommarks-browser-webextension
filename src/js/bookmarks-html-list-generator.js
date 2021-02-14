@@ -11,18 +11,18 @@ function makeBookmarksList(bookmarks, div_id){
 
     if(bookmarks.length == 0) {
         var h3 = document.createElement("h3");
-        h3.textContent = 'No bookmarks found';
+        h3.textContent = 'Nie znaleziono zakładek';
         h3.className = "subtitle";
         bookmarks_html_list.appendChild(h3);
     }
 
     if(bookmarks.length > 0) {
         var h3 = document.createElement("h3");
-        h3.textContent = 'Bookmarks';
+        h3.textContent = 'Zakładki';
         h3.className = "subtitle";
         var subtitle = document.createElement("span");
         subtitle.className = "subtitle";
-        subtitle.textContent = '(showing ' + bookmarks.length + ' items)';
+        subtitle.textContent = '(pokazuję ' + bookmarks.length + ' element(ów))';
         h3.appendChild(subtitle);
         bookmarks_html_list.appendChild(h3);
 
@@ -66,7 +66,7 @@ function makeBookmarksList(bookmarks, div_id){
             // Delete button
             var delete_button = document.createElement("button");
             delete_button.className = "btn btn-danger";
-            delete_button.textContent = "Delete";
+            delete_button.textContent = "Usuń";
             delete_button.addEventListener('click', myFunc, false);
             delete_button.myParam = bookmark.id;
             function myFunc(e){

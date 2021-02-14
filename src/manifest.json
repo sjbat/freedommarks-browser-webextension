@@ -1,8 +1,8 @@
 {
-  "name": "FreedomMarks",
-  "version": "0.1.2",
+  "name": "ZakładkiNextcloud",
+  "version": "0.1.4",
   "manifest_version": 2,
-  "description": "Browser extension for Nextcloud Bookmarks",
+  "description": "Rozszerzenie przeglądarki dla Zakładki Nextcloud",
   "homepage_url": "https://github.com/damko/freedommarks-browser-webextension",
 
   "options_ui": {
@@ -26,13 +26,13 @@
       "dark": "icons/FreedomMarks_dark_48x48.png",
       "size": 48
     }],
-    "default_title": "FreedomMarks",
+    "default_title": "Zakładki w Nextcloud",
     "default_popup": "FreedomMarks.html"
   },
 
   "applications": {
     "gecko": {
-      "id": "freedommarks.extension@venturin.net",
+      "id": "zakladki_nextcloud@lhub.pl",
       "strict_min_version": "48.0"
     }
   },
