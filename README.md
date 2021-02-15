@@ -1,3 +1,14 @@
+# Zakładki NextCloud
+
+Rozszerzenie do przeglądarek FireFox i Chromium-podobnych dla [Nextcloud Bookmarks](https://github.com/nextcloud/bookmarks), popularnej aplikacji do zakładek dla Nextcloud-a.
+
+Ponieważ korzystam z wielu przeglądarek, ich wbudowane mechanizmy synchronizacji nie załatwiają problemu JEDNEJ, centralnej bazy. To rozszerzenie, uzupełnione przez apkę na Androida oraz funkcjonalność NextCloud-a to dla mnie idealny tandem.
+
+---
+
+Fork [FreedomMarks](https://github.com/damko/freedommarks-browser-webextension), spolszczony, jQuery podniesione do 3.0. Do wykorzystania z każdą instancją NextCloud (podpowiada adres https://chmura.lhub.pl).
+
+
 # Browser extension for Nextcloud Bookmarks
 
 This is a cross-browser extension for [Nextcloud Bookmarks](https://github.com/nextcloud/bookmarks), a very popular bookmark application for Nextcloud.
